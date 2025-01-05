@@ -1,6 +1,6 @@
 const sharp = require("sharp");
 const path = require("path");
-const fs = require("fs").promises; // Use promises for fs
+const fs = require("fs").promises; 
 
 exports.uploadFile = async (req, res) => {
   if (!req.file) return res.status(400).send("No file uploaded");

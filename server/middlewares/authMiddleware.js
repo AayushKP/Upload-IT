@@ -11,8 +11,7 @@ exports.protect = (req, res, next) => {
       console.error("Token verification error:", err);
       return res.status(401).json({ message: "Token invalid" });
     }
-    // Assuming decoded contains userId or id field from token payload
-    req.user = decoded.id; // Adjust the field based on your token structure
+    req.user = decoded.id; 
     next();
   });
 };
